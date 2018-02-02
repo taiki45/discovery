@@ -29,7 +29,6 @@ services:
       - '3080:80'
   sds:
     build: '..'
-    command: ['python', 'wsgi.py']
     environment:
       - BACKEND_STORAGE=InMemory
       - APPLICATION_ENV=development
