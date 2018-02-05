@@ -36,6 +36,8 @@ Discovery service settings are controlled by [environment variables](https://git
   * Used only in case of DynamoDB backend.
 * DYNAMODB_URL
   * Used only for development in case of DynamoDB backend running locally.
+* AWS_REGION
+  * Used to switch AWS region. Default is `us-east-1`.
 * DYNAMODB_CREATE_TABLES_IN_APP
   * Used for creating DynamoDB table, useful only in case DynamoDB backend storage used.
 

@@ -13,6 +13,8 @@ defaults = {
     'DYNAMODB_TABLE_HOSTS': '',
     # Used only for development in case of DynamoDB backend running locally.
     'DYNAMODB_URL': '',
+    # Used to switch AWS region
+    'AWS_REGION': 'us-east-1',
     # Only applied when DynamoDB backend is used. Create sample DynamoDB table for testing.
     'DYNAMODB_CREATE_TABLES_IN_APP': '',
     # Sweep host (remove from discovery service and backend storage)

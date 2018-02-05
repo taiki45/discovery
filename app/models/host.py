@@ -20,6 +20,7 @@ class Host(Model):
 
     class Meta:
         table_name = settings.value.DYNAMODB_TABLE_HOSTS
+        region = settings.value.AWS_REGION
         if settings.value.APPLICATION_ENV == 'development':
             host = settings.value.DYNAMODB_URL
 
