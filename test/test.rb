@@ -96,7 +96,8 @@ Net::HTTP.start(envoy_url.host, envoy_url.port) do |http|
     i = 0
     loop do
       response = http.get('/', Host: 'user')
-      throw(:break) if response.code == '200'
+      response2 = http.get('/', Host: 'ab-testing')
+      throw(:break) if response.code == '200' && response2.code == '200'
 
       raise('Can not fetch healty upstreams') if i == 30
       puts 'waiting the envoy to fetch from SDS...'
