@@ -1,8 +1,15 @@
 from .. import settings
+
+import logging
+
 from pynamodb.models import Model
 from pynamodb.attributes import UnicodeAttribute, NumberAttribute, UTCDateTimeAttribute, JSONAttribute
 from pynamodb.indexes import GlobalSecondaryIndex, AllProjection
 
+logging.basicConfig()
+log = logging.getLogger("pynamodb")
+log.setLevel(logging.INFO)
+log.propagate = True
 
 class ServiceRepoNameIndex(GlobalSecondaryIndex):
     class Meta:
